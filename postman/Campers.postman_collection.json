@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "8ff5ba73-90f4-465b-84bd-88d9721d1868",
+		"name": "Campers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23145030"
+	},
+	"item": [
+		{
+			"name": "CreateCamper",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John\",\r\n    \"age\": 19,\r\n    \"allergies\": [\r\n        \"Peanuts\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/campers",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"campers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllCampers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/campers",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"campers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCamperAllergies",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"allergies\": [\r\n        \"Cookies\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/campers/641668dfed43d81b982bd0b5/allergies",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"campers",
+						"641668dfed43d81b982bd0b5",
+						"allergies"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
